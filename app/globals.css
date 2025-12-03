@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #214332;
+  --card: #ffffff;
+  --card-foreground: #222826;
+  --popover: #ffffff;
+  --popover-foreground: #222826;
+  --primary: #214332;
+  --primary-foreground: #fafafa;
+  --secondary: #e8f5ee;
+  --secondary-foreground: #171717;
+  --muted: #f5f5f5;
+  --muted-foreground: #314158;
+  --accent: #e8f5ee;
+  --accent-foreground: #214332;
+  --destructive: #ffe2e2;
+  --destructive-foreground: #fb2c36;
+  --border: #ffffff;
+  --input: #e5e5e5;
+  --ring: #a1a1a1;
+  --chart-1: #6ffd02;
+  --chart-2: #d5fe5d;
+  --chart-3: #214332;
+  --chart-4: #e8f5ee;
+  --chart-5: #fdef64;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #222826;
+  --sidebar-primary: #214332;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #e8e9ed;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #a1a1a1;
+  --font-sans: Poppins, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: Roboto, ui-sans-serif, sans-serif, system-ui;
+  --font-mono: JetBrains Mono, ui-monospace, monospace;
+  --radius: 0.9rem;
+}
+
+.dark {
+  --background: #1b1818;
+  --foreground: #fafafa;
+  --card: #141010;
+  --card-foreground: #fafafa;
+  --popover: #27272a;
+  --popover-foreground: #fafafa;
+  --primary: #214332;
+  --primary-foreground: #fafafa;
+  --secondary: #e8f5ee;
+  --secondary-foreground: #214332;
+  --muted: #27272a;
+  --muted-foreground: #a1a1a1;
+  --accent: #e8f5ee;
+  --accent-foreground: #214332;
+  --destructive: #fef2f2;
+  --destructive-foreground: #fb2c36;
+  --border: #141010;
+  --input: #214332;
+  --ring: #214332;
+  --chart-1: #214332;
+  --chart-2: #6ffd02;
+  --chart-3: #d5fe5d;
+  --chart-4: #fdef64;
+  --chart-5: #e8f5ee;
+  --sidebar: #171717;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #214332;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #282828;
+  --sidebar-ring: #525252;
+  --font-sans: Poppins, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: Roboto, ui-sans-serif, sans-serif, system-ui;
+  --font-mono: JetBrains Mono, ui-monospace, monospace;
+  --radius: 0.9rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
